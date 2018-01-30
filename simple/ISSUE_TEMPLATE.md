@@ -1,7 +1,7 @@
-## Expected Behavior
+## Expected Behaviour
 
 
-## Actual Behavior
+## Actual Behaviour
 
 
 ## Steps to Reproduce the Problem
