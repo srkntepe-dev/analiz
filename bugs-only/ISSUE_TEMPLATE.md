@@ -1,5 +1,7 @@
 Issue tracker is **ONLY** used for reporting bugs. NO NEW FEATURE ACCEPTED! Use [stackoverflow](https://stackoverflow.com) for supporting issues.
 
+ADD A REWARD using [Speed](speedoss.com) to SOLVE this issue QUICKLY and SUPPORT this project.
+
 <!--- Provide a general summary of the issue in the Title above -->
 
 ## Expected Behavior
