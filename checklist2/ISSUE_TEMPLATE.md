@@ -1,28 +1,35 @@
-### Prerequisites
-
-* [ ] Can you reproduce the problem in safe mode?
-* [ ] Are you running the latest version?
-* [ ] Did you check the debugging guide?
-* [ ] Did you check the FAQs on Discuss?
-* [ ] Are you reporting to the correct repository?
-* [ ] Did you perform a cursory search?
-
-For more information, see the `CONTRIBUTING` guide.
-
-### Description
-
-[Description of the bug or feature]
-
-### Steps to Reproduce
-
-1. [First Step]
-2. [Second Step]
-3. [and so on...]
-
-**Expected behavior:** [What you expected to happen]
-
-**Actual behavior:** [What actually happened]
-
-### Versions
-
-You can get this information from executing `npm version`.
+name: 🐞 Bug
+description: File a bug/issue
+title: "[BUG] <title>"
+labels: [Bug, Needs Triage]
+body:
+- type: checkboxes
+  attributes:
+    label: Is there an existing issue for this?
+    description: Please search to see if an issue already exists for the bug you encountered.
+    options:
+    - label: I have searched the existing issues
+      required: true
+- type: textarea
+  attributes:
+    label: Current Behavior
+    description: A concise description of what you're experiencing.
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Expected Behavior
+    description: A concise description of what you expected to happen.
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Steps To Reproduce
+    description: Steps to reproduce the behavior.
+    placeholder: |
+      1. In this environment...
+      2. With this config...
+      3. Run '...'
+      4. See error...
+  validations:
+    required: false
