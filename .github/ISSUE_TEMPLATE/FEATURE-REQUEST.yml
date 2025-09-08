@@ -38,15 +38,6 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: start_date
-    attributes:
-      label: "Planlanan Başlangıç"
-      description: Geliştirmenin planlanan başlangıç tarihi
-      placeholder: "gg.aa.yyyy"
-    validations:
-      required: false
-
   - type: textarea
     id: summary
     attributes:
