@@ -1,8 +1,22 @@
-blank_issues_enabled: false
+    blank_issues_enabled: false
 contact_links:
-  - name: 📖 Belgeler
-    url: https://github.com/<kullanici>/<repo>/tree/main/docs
-    about: Proje dokümantasyonuna buradan ulaşabilirsiniz.
-  - name: 🔒 Güvenlik İletişim
-    url: mailto:security@ornek.com
-    about: Güvenlik açıklarını herkese açık olarak yazmayın; e-posta ile özelden bildirin.
+  - name: 📝 Genel Analiz Talebi
+    url: https://github.com/<ORG>/<REPO>/issues/new?template=genel_analiz.yml&labels=genel-analiz
+    about: Yeni bir modül için Genel Analiz issue’su aç (kapsam, iş kuralları, user story)
+
+  - name: ⚙️ Teknik Analiz Talebi
+    url: https://github.com/<ORG>/<REPO>/issues/new?template=teknik_analiz.yml&labels=teknik-analiz
+    about: Teknik kararlar, ER veri modeli, API sözleşmeleri, performans ve güvenlik
+
+  - name: 💻 Kodlama Talebi
+    url: https://github.com/<ORG>/<REPO>/issues/new?template=kodlama.yml&labels=kodlama
+    about: Geliştirme görevi (endpoint, UI, test vb.) için issue oluştur
+
+  - name: 🐛 Hata Bildirimi
+    url: https://github.com/<ORG>/<REPO>/issues/new?template=bug_report.yml&labels=bug
+    about: Uygulamada gördüğünüz bir hatayı rapor edin
+
+  - name: 💡 Özellik Talebi
+    url: https://github.com/<ORG>/<REPO>/issues/new?template=feature_request.yml&labels=enhancement
+    about: Yeni bir özellik/iyileştirme isteği oluştur
+
