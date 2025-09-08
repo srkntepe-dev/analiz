@@ -1,62 +1,66 @@
-name: "🐛 Bug Report"
-description: Create a new ticket for a bug.
-title: "🐛 [BUG] - <title>"
-labels: [
-  "bug"
-]
+name: "🐛 Hata Bildirimi"
+description: Yeni bir hata için ticket oluştur
+title: "🐛 [BUG] - <başlık>"
+labels:
+  - "bug"
 body:
   - type: textarea
     id: description
     attributes:
-      label: "Description"
-      description: Please enter an explicit description of your issue
-      placeholder: Short and explicit description of your incident...
+      label: "Açıklama"
+      description: Karşılaştığınız hatayı net ve kısa şekilde yazın
+      placeholder: Olayın kısa ve net açıklaması...
     validations:
       required: true
+
   - type: input
     id: reprod-url
     attributes:
-      label: "Reproduction URL"
-      description: Please enter your GitHub URL to provide a reproduction of the issue
-      placeholder: ex. https://github.com/USERNAME/REPO-NAME
+      label: "Tekrarlama URL'si"
+      description: Hatanın tekrarlandığı GitHub repo veya canlı linki
+      placeholder: "örn. https://github.com/KULLANICI/REPO-ADI"
     validations:
       required: true
+
   - type: textarea
     id: reprod
     attributes:
-      label: "Reproduction steps"
-      description: Please enter an explicit description of your issue
+      label: "Tekrarlama Adımları"
+      description: Hatanın oluşması için izlenen adımlar
       value: |
-        1. Go to '...'
-        2. Click on '....'
-        3. Scroll down to '....'
-        4. See error
+        1. ... sayfasına git
+        2. ... butonuna tıkla
+        3. ... yap
+        4. Hata görülür
       render: bash
     validations:
       required: true
+
   - type: textarea
     id: screenshot
     attributes:
-      label: "Screenshots"
-      description: If applicable, add screenshots to help explain your problem.
+      label: "Ekran Görüntüsü"
+      description: Varsa ekran görüntüsü ekleyin
       value: |
-        ![DESCRIPTION](LINK.png)
+        ![AÇIKLAMA](LINK.png)
       render: bash
     validations:
       required: false
+
   - type: textarea
     id: logs
     attributes:
-      label: "Logs"
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      label: "Log Çıktıları"
+      description: İlgili log çıktılarını buraya yapıştırın. Otomatik olarak kod blokları halinde biçimlendirilecektir.
       render: bash
     validations:
       required: false
+
   - type: dropdown
     id: browsers
     attributes:
-      label: "Browsers"
-      description: What browsers are you seeing the problem on ?
+      label: "Tarayıcılar"
+      description: Hangi tarayıcılarda hata görülüyor?
       multiple: true
       options:
         - Firefox
@@ -66,11 +70,12 @@ body:
         - Opera
     validations:
       required: false
+
   - type: dropdown
     id: os
     attributes:
-      label: "OS"
-      description: What is the impacted environment ?
+      label: "İşletim Sistemi"
+      description: Hangi ortamda sorun yaşıyorsunuz?
       multiple: true
       options:
         - Windows
