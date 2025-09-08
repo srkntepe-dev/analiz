@@ -1,63 +1,68 @@
-name: "💡 Feature Request"
-description: Create a new ticket for a new feature request
-title: "💡 [REQUEST] - <title>"
-labels: [
-  "question"
-]
+name: "💡 Özellik Talebi"
+description: Yeni bir özellik talebi için ticket oluştur
+title: "💡 [REQUEST] - <başlık>"
+labels:
+  - "question"
 body:
   - type: input
     id: start_date
     attributes:
-      label: "Start Date"
-      description: Start of development
-      placeholder: "month/day/year"
+      label: "Başlangıç Tarihi"
+      description: Geliştirmenin başlangıç tarihi
+      placeholder: "ay/gün/yıl"
     validations:
       required: false
+
   - type: textarea
     id: implementation_pr
     attributes:
-      label: "Implementation PR"
-      description: Pull request used
+      label: "Uygulama PR"
+      description: Kullanılan pull request
       placeholder: "#Pull Request ID"
     validations:
       required: false
+
   - type: textarea
     id: reference_issues
     attributes:
-      label: "Reference Issues"
-      description: Common issues
-      placeholder: "#Issues IDs"
+      label: "Referans Issue'lar"
+      description: İlgili/ortak issue'lar
+      placeholder: "#Issue ID'leri"
     validations:
       required: false
+
   - type: textarea
     id: summary
     attributes:
-      label: "Summary"
-      description: Provide a brief explanation of the feature
-      placeholder: Describe in a few lines your feature request
+      label: "Özet"
+      description: Özelliğin kısa açıklaması
+      placeholder: Özellik talebinizi birkaç cümlede anlatın
     validations:
       required: true
+
   - type: textarea
     id: basic_example
     attributes:
-      label: "Basic Example"
-      description: Indicate here some basic examples of your feature.
-      placeholder: A few specific words about your feature request.
+      label: "Basit Örnek"
+      description: Özelliğinizin temel kullanım örnekleri
+      placeholder: Özelliğe dair birkaç somut örnek yazın
     validations:
       required: true
+
   - type: textarea
     id: drawbacks
     attributes:
-      label: "Drawbacks"
-      description: What are the drawbacks/impacts of your feature request ?
-      placeholder: Identify the drawbacks and impacts while being neutral on your feature request
+      label: "Sakıncalar"
+      description: Özellik talebinizin olası sakıncaları/etkileri nelerdir?
+      placeholder: Tarafsız kalarak sakıncaları ve etkileri belirtin
     validations:
       required: true
+
   - type: textarea
     id: unresolved_question
     attributes:
-      label: "Unresolved questions"
-      description: What questions still remain unresolved ?
-      placeholder: Identify any unresolved issues.
+      label: "Cevapsız Sorular"
+      description: Hâlâ netleşmeyen sorular nelerdir?
+      placeholder: Netleşmemiş başlıkları buraya yazın
     validations:
       required: false
