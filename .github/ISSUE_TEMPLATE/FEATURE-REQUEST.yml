@@ -1,33 +1,49 @@
 name: "💡 Özellik Talebi"
-description: Yeni bir özellik talebi için ticket oluştur
-title: "💡 [REQUEST] - <başlık>"
+description: Yeni bir özellik/iyileştirme talebi oluştur
+title: "💡 [FEATURE] - <başlık>"
 labels:
-  - "question"
+  - "enhancement"
+
 body:
+  - type: input
+    id: module
+    attributes:
+      label: "Modül"
+      description: Hangi modül için? (örn. coverage, efatura, stok)
+      placeholder: "coverage"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: stage
+    attributes:
+      label: "Aşama"
+      description: 3 aşamalı akışınıza göre seçin
+      options:
+        - Genel Analiz
+        - Teknik Analiz
+        - Kodlama
+      default: 0
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Öncelik"
+      options:
+        - Kritik
+        - Yüksek
+        - Orta
+        - Düşük
+      default: 2
+    validations:
+      required: true
+
   - type: input
     id: start_date
     attributes:
-      label: "Başlangıç Tarihi"
-      description: Geliştirmenin başlangıç tarihi
-      placeholder: "ay/gün/yıl"
-    validations:
-      required: false
-
-  - type: textarea
-    id: implementation_pr
-    attributes:
-      label: "Uygulama PR"
-      description: Kullanılan pull request
-      placeholder: "#Pull Request ID"
-    validations:
-      required: false
-
-  - type: textarea
-    id: reference_issues
-    attributes:
-      label: "Referans Issue'lar"
-      description: İlgili/ortak issue'lar
-      placeholder: "#Issue ID'leri"
+      label: "Planlanan Başlangıç"
+      description: Geliştirmenin planlanan başlangıç tarihi
+      placeholder: "gg.aa.yyyy"
     validations:
       required: false
 
@@ -35,34 +51,51 @@ body:
     id: summary
     attributes:
       label: "Özet"
-      description: Özelliğin kısa açıklaması
-      placeholder: Özellik talebinizi birkaç cümlede anlatın
+      description: Özellik isteğinin kısa açıklaması
+      placeholder: Birkaç cümlede ihtiyacı ve hedefi anlatın
+    validations:
+      required: true
+
+  - type: textarea
+    id: gwt
+    attributes:
+      label: "Kabul Kriterleri (Given / When / Then)"
+      description: Net kabul kriterleri yazın (test edilebilir)
+      placeholder: |
+        Given ...
+        When  ...
+        Then  ...
     validations:
       required: true
 
   - type: textarea
     id: basic_example
     attributes:
-      label: "Basit Örnek"
-      description: Özelliğinizin temel kullanım örnekleri
-      placeholder: Özelliğe dair birkaç somut örnek yazın
+      label: "Temel Örnek / Kullanım"
+      description: Beklenen davranışa dair kısa örnekler
+      placeholder: |
+        - Kullanıcı ... yaptığında ... görür
+        - API ... parametreleriyle çağrıldığında ... döner
     validations:
       required: true
 
   - type: textarea
     id: drawbacks
     attributes:
-      label: "Sakıncalar"
-      description: Özellik talebinizin olası sakıncaları/etkileri nelerdir?
-      placeholder: Tarafsız kalarak sakıncaları ve etkileri belirtin
+      label: "Etkiler / Sakıncalar"
+      description: Performans, güvenlik, bakım maliyeti vb. etkiler
+      placeholder: Tarafsız şekilde olası riskleri belirtin
     validations:
-      required: true
+      required: false
 
   - type: textarea
-    id: unresolved_question
+    id: references
     attributes:
-      label: "Cevapsız Sorular"
-      description: Hâlâ netleşmeyen sorular nelerdir?
-      placeholder: Netleşmemiş başlıkları buraya yazın
+      label: "Referanslar"
+      description: İlgili PR/Issue/Doc bağlantıları
+      placeholder: |
+        - #123
+        - /docs/<modul>/02_teknik_analiz.md
+        - Dış linkler
     validations:
       required: false
