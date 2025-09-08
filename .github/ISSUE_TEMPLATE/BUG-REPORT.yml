@@ -55,31 +55,5 @@ body:
       render: bash
     validations:
       required: false
-
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: "Tarayıcılar"
-      description: Hangi tarayıcılarda hata görülüyor?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-        - Opera
-    validations:
-      required: false
-
-  - type: dropdown
-    id: os
-    attributes:
-      label: "İşletim Sistemi"
-      description: Hangi ortamda sorun yaşıyorsunuz?
-      multiple: true
-      options:
-        - Windows
-        - Linux
-        - Mac
-    validations:
-      required: false
+ 
+ 
