@@ -1,1 +1,8 @@
 blank_issues_enabled: false
+contact_links:
+  - name: 📖 Belgeler
+    url: https://github.com/<kullanici>/<repo>/tree/main/docs
+    about: Proje dokümantasyonuna buradan ulaşabilirsiniz.
+  - name: 🔒 Güvenlik İletişim
+    url: mailto:security@ornek.com
+    about: Güvenlik açıklarını herkese açık olarak yazmayın; e-posta ile özelden bildirin.
